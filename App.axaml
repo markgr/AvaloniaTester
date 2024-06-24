@@ -1,0 +1,25 @@
+<Application xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="MVVMTest1.App"
+             xmlns:local="using:MVVMTest1"
+             RequestedThemeVariant="Dark">
+             <!-- "Default" ThemeVariant follows system theme variant. "Dark" or "Light" are other available options. -->
+
+    <Application.DataTemplates>
+        <local:ViewLocator/>
+    </Application.DataTemplates>
+  
+    <Application.Styles>
+        <FluentTheme />
+		<StyleInclude Source="/Assets/Icons.axaml"></StyleInclude>
+    </Application.Styles>
+
+	<Application.Resources>
+		<ResourceDictionary>
+			<ResourceDictionary.MergedDictionaries>
+				<ResourceInclude Source="/Assets/Images.axaml" />
+			</ResourceDictionary.MergedDictionaries>
+		</ResourceDictionary>
+	</Application.Resources>
+	
+</Application>

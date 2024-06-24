@@ -1,0 +1,32 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+			 xmlns:converters="using:MVVMTest1.Converters"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="MVVMTest1.Views.ImagePageView">
+	<UserControl.Resources>
+		<converters:BitmapAssetValueConverter x:Key="BitmapConverter" />
+	</UserControl.Resources>
+	<ScrollViewer>
+		<StackPanel Orientation="Vertical" Spacing="5" Margin="10" HorizontalAlignment="Left">
+			<TextBlock HorizontalAlignment="Left" Text="Coffee Images" FontSize="20" />
+			<TextBlock HorizontalAlignment="Left" Text="Declarative" />
+			<Border CornerRadius="10" ClipToBounds="True" Width="300">
+				<Image Source="/Assets/coffee1.jpg"
+					   MaxWidth="300"/>
+			</Border>
+
+			<TextBlock HorizontalAlignment="Left" Text="Converter Version" />
+			<Border CornerRadius="10" ClipToBounds="True" Width="300">
+				<Image Source="{Binding ImageSourceString, Converter={StaticResource BitmapConverter}}" />
+			</Border>
+			
+			<TextBlock HorizontalAlignment="Left" Text="From Resource Dictionary" />
+			<Border CornerRadius="10" ClipToBounds="True" Width="300">
+				<Image Source="{Binding Source={StaticResource twolattes}, Path=Source}" />
+			</Border>
+			
+		</StackPanel>
+	</ScrollViewer>
+</UserControl>
