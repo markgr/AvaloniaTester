@@ -4,7 +4,7 @@ using Projektanker.Icons.Avalonia;
 using System;
 using Projektanker.Icons.Avalonia.MaterialDesign;
 
-namespace MVVMTest1;
+namespace AvaloniaTester;
 
 class Program
 {

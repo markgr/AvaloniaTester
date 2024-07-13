@@ -1,6 +1,6 @@
 using Avalonia.Controls;
 
-namespace MVVMTest1.Views;
+namespace AvaloniaTester.Views;
 
 public partial class MainWindow : Window
 {

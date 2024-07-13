@@ -2,7 +2,45 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+			 xmlns:templates="using:AvaloniaTester.Template"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
-             x:Class="MVVMTest1.Views.ButtonPageView">
-  <TextBlock Margin="10 20" Text="Buttons" />
+             x:Class="AvaloniaTester.Views.ButtonPageView">
+	<ScrollViewer>
+		<StackPanel Margin="20">
+			<TextBlock Grid.Row="0" Margin="0 20" FontSize="20" FontWeight="Bold">Buttons</TextBlock>
+			<CheckBox Content="Disable Buttons" IsChecked="{Binding !IsButtonEnabled}"/>
+
+			<TextBlock Grid.Row="0" Margin="0 20" FontSize="15" FontWeight="Bold">Standard button</TextBlock>
+			<templates:ContentExample>
+				<Button Content="Button" IsEnabled="{Binding IsButtonEnabled}"></Button>
+			</templates:ContentExample>
+
+			<TextBlock Grid.Row="0" Margin="0 20" FontSize="15" FontWeight="Bold">Toggle Button</TextBlock>
+			<templates:ContentExample>
+				<ToggleButton IsEnabled="{Binding IsButtonEnabled}" Content="Toggle Button"></ToggleButton>
+			</templates:ContentExample>
+
+			<TextBlock Grid.Row="0" Margin="0 20" FontSize="15" FontWeight="Bold">Toggle Switch</TextBlock>
+			<templates:ContentExample>
+				<ToggleSwitch IsEnabled="{Binding IsButtonEnabled}"></ToggleSwitch>
+			</templates:ContentExample>
+
+			<TextBlock Grid.Row="0" Margin="0 20" FontSize="15" FontWeight="Bold">Radio Buttons</TextBlock>
+			<templates:ContentExample>
+				<StackPanel Margin="20" IsEnabled="{Binding IsButtonEnabled}">
+					<TextBlock Margin="0 10 0 5">First Group</TextBlock>
+					<RadioButton GroupName="FirstGroup" Content="Option 1"/>
+					<RadioButton GroupName="FirstGroup" Content="Option 2"/>
+					<RadioButton GroupName="FirstGroup" Content="Option 3"/>
+				</StackPanel>
+			</templates:ContentExample>
+
+			<TextBlock Grid.Row="0" Margin="0 20" FontSize="15" FontWeight="Bold">Button Spinner</TextBlock>
+			<templates:ContentExample>
+				<ButtonSpinner Spin="ButtonSpinner_Spin" Width="130" ButtonSpinnerLocation="Left" HorizontalAlignment="Left">
+					<TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Text="0" />
+				</ButtonSpinner>
+			</templates:ContentExample>
+		</StackPanel>
+	</ScrollViewer>
 </UserControl>

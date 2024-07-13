@@ -1,0 +1,19 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="AvaloniaTester.Views.DataGridPageView">
+	<StackPanel Spacing="5" Margin="20">
+		<TextBlock Grid.Row="0" Margin="0 20" FontSize="20" FontWeight="Bold">DataGrid</TextBlock>
+		<DataGrid ItemsSource="{Binding People}" Margin="20" AutoGenerateColumns="False" IsReadOnly="True"
+				  GridLinesVisibility="All" BorderThickness="1" BorderBrush="Gray"
+				  CanUserReorderColumns="True" CanUserResizeColumns="True" CanUserSortColumns="True">
+			<DataGrid.Columns>
+				<DataGridTextColumn Header="Id" Width="*" Binding="{Binding Id}"/>
+				<DataGridTextColumn Header="First Name" Width="2*" Binding="{Binding FirstName}"/>
+				<DataGridTextColumn Header="Last Name" Width="2*" Binding="{Binding LastName}"/>
+			</DataGrid.Columns>
+		</DataGrid>
+	</StackPanel>
+</UserControl>

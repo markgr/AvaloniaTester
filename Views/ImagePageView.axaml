@@ -2,14 +2,14 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-			 xmlns:converters="using:MVVMTest1.Converters"
+			 xmlns:converters="using:AvaloniaTester.Converters"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
-             x:Class="MVVMTest1.Views.ImagePageView">
+             x:Class="AvaloniaTester.Views.ImagePageView">
 	<UserControl.Resources>
 		<converters:BitmapAssetValueConverter x:Key="BitmapConverter" />
 	</UserControl.Resources>
 	<ScrollViewer>
-		<StackPanel Orientation="Vertical" Spacing="5" Margin="10" HorizontalAlignment="Left">
+		<StackPanel Orientation="Vertical" Spacing="5" Margin="20" HorizontalAlignment="Left">
 			<TextBlock HorizontalAlignment="Left" Text="Coffee Images" FontSize="20" />
 			<TextBlock HorizontalAlignment="Left" Text="Declarative" />
 			<Border CornerRadius="10" ClipToBounds="True" Width="300">
@@ -26,7 +26,17 @@
 			<Border CornerRadius="10" ClipToBounds="True" Width="300">
 				<Image Source="{Binding Source={StaticResource twolattes}, Path=Source}" />
 			</Border>
-			
+
+			<TextBlock HorizontalAlignment="Left" Text="Image Helper Local" />
+			<Border CornerRadius="10" ClipToBounds="True" Width="300">
+				<Image Source="{Binding ImageSourceBitmapLocal}" />
+			</Border>
+
+			<TextBlock HorizontalAlignment="Left" Text="Image Helper From Web" />
+			<Border CornerRadius="10" ClipToBounds="True" Width="300">
+				<Image Source="{Binding ImageSourceBitmapWeb^}" />
+			</Border>
+								
 		</StackPanel>
 	</ScrollViewer>
 </UserControl>

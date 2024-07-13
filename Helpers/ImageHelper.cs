@@ -7,7 +7,7 @@ using System.Net.Http.Headers;
 using System.Reflection;
 using System.Threading.Tasks;
 
-namespace MVVMTest1.Helpers
+namespace AvaloniaTester.Helpers
 {
     public static class ImageHelper
     {

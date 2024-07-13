@@ -1,4 +1,4 @@
-﻿namespace MVVMTest1.ViewModels
+﻿namespace AvaloniaTester.ViewModels
 {
     internal class HomePageViewModel : ViewModelBase
     {

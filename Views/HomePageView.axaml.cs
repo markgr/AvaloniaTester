@@ -1,8 +1,6 @@
-using Avalonia;
 using Avalonia.Controls;
-using Avalonia.Markup.Xaml;
 
-namespace MVVMTest1.Views;
+namespace AvaloniaTester.Views;
 
 public partial class HomePageView : UserControl
 {

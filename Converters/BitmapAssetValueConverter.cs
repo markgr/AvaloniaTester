@@ -5,7 +5,7 @@ using System;
 using System.Globalization;
 using System.Reflection;
 
-namespace MVVMTest1.Converters
+namespace AvaloniaTester.Converters
 {
     public class BitmapAssetValueConverter : IValueConverter
     {

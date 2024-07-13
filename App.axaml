@@ -1,7 +1,7 @@
 <Application xmlns="https://github.com/avaloniaui"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             x:Class="MVVMTest1.App"
-             xmlns:local="using:MVVMTest1"
+             x:Class="AvaloniaTester.App"
+             xmlns:local="using:AvaloniaTester"
              RequestedThemeVariant="Dark">
              <!-- "Default" ThemeVariant follows system theme variant. "Dark" or "Light" are other available options. -->
 
@@ -12,6 +12,8 @@
     <Application.Styles>
         <FluentTheme />
 		<StyleInclude Source="/Assets/Icons.axaml"></StyleInclude>
+		<StyleInclude Source="/Template/ContentExample.axaml"></StyleInclude>
+		<StyleInclude Source="avares://Avalonia.Controls.DataGrid/Themes/Fluent.xaml"></StyleInclude>
     </Application.Styles>
 
 	<Application.Resources>

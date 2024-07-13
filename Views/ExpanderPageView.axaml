@@ -1,0 +1,49 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="AvaloniaTester.Views.ExpanderPageView">
+	<UserControl.Resources>
+		<ResourceDictionary>
+			<Color x:Key="SystemBaseLowColor">#00000000</Color>
+			<StaticResource x:Key="ExpanderHeaderBorderBrush" ResourceKey="SystemBaseLowColor"/>
+			<StaticResource x:Key="ExpanderHeaderBorderBrushPointerOver" ResourceKey="SystemBaseLowColor" />
+			<StaticResource x:Key="ExpanderHeaderBorderBrushPressed" ResourceKey="SystemBaseLowColor" />
+			<StaticResource x:Key="ExpanderHeaderBorderBrushDisabled" ResourceKey="SystemControlDisabledBaseLowBrush" />
+			<SolidColorBrush  x:Key="ExpanderHeaderBackgroundPointerOver" Color="#2d2d2d" />
+			<SolidColorBrush x:Key="ExpanderContentBackground" Color="Transparent" />
+			<SolidColorBrush x:Key="ExpanderContentBorderBrush" Color="Transparent" />
+		</ResourceDictionary>
+	</UserControl.Resources>
+	
+	<StackPanel Spacing="10" Margin="20">
+		<TextBlock Grid.Row="0" Margin="0 20" FontSize="20" FontWeight="Bold">Expander Samples</TextBlock>
+		<Expander VerticalAlignment="Top">
+			<Expander.Header>
+				Hidden Search
+			</Expander.Header>
+			<Grid RowDefinitions="*,*" ColumnDefinitions="150,*" >
+				<TextBlock Grid.Row="0" Grid.Column="0"
+						   VerticalAlignment="Center">Search</TextBlock>
+				<TextBox Grid.Row="0" Grid.Column="1"
+						 Watermark="Search text" Width="200" />
+				<TextBlock Grid.Row="1" Grid.Column="0"
+						   VerticalAlignment="Center">Case sensitive?</TextBlock>
+				<CheckBox Grid.Row="1" Grid.Column="1" />
+			</Grid>
+		</Expander>
+		<Expander VerticalAlignment="Top">
+			<Expander.Header>
+				Converters
+			</Expander.Header>
+			<ListBox Background="Transparent">
+				<ListBox.Items>
+					<TextBlock Text="HTML"/>
+					<TextBlock Text="SQL"/>
+					<TextBlock Text="XML"/>
+				</ListBox.Items>
+			</ListBox>
+		</Expander>
+	</StackPanel>
+</UserControl>

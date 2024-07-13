@@ -2,9 +2,9 @@
 
 namespace AvaloniaTester.ViewModels
 {
-    internal partial class ButtonPageViewModel : ViewModelBase
+    internal partial class TextPageViewModel : ViewModelBase
     {
         [ObservableProperty]
-        private bool _isButtonEnabled = true;
+        private bool _isTextEnabled = true;
     }
 }

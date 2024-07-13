@@ -1,6 +1,5 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
-namespace MVVMTest1.ViewModels;
-
+namespace AvaloniaTester.ViewModels;
 
 public class ViewModelBase : ObservableObject
 
